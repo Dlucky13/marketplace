@@ -1,24 +1,30 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from "@angular/material/button";
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {MainPageComponent} from './components/main-page/main-page.component';
+import {SharedModule} from "./shared.module";
+import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {GOODS_DATA, goodsData} from "./fakeData/rest-data";
+import {DOCUMENT} from "@angular/common";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule,
-    MatToolbarModule  ,
-    MatIconModule,
-    MatButtonModule
+    AppRoutingModule,
+    SharedModule,
+    NoopAnimationsModule
   ],
-  providers: [],
+  providers: [{
+    provide: GOODS_DATA,
+    useValue: goodsData
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

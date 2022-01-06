@@ -1,0 +1,22 @@
+<mat-grid-list cols="4" rowHeight="1:2" >
+  <mat-grid-tile colspan="2" #imgBlock [@focus]="animationState">
+    <img [src]="good.imgUrl" alt="phone photo" class="good__picture">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" >
+    <div class="good__description">
+      <h2 class="name">{{good.name}}</h2>
+      <h3 class="category">{{good.category}}</h3>
+      <p class="price">{{good.price}}</p>
+      <div class="actions">
+        <button mat-icon-button color="primary"  aria-label="add to cart">
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+        <button class="favorite__button" color="primary" mat-icon-button aria-label="add to favorite">
+          <mat-icon>favorite_border</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
