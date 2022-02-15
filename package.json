@@ -23,5 +23,8 @@
   "homepage": "https://github.com/Dlucky13/marketplace#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
