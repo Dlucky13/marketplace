@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {GoodItem} from "../../../../../fakeData/rest-data";
-import {state, style, transition, trigger} from "@angular/animations";
+import {state, style, trigger} from "@angular/animations";
 import {fromEvent} from "rxjs";
 
 @Component({

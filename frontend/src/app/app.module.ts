@@ -7,7 +7,6 @@ import {MainPageComponent} from './components/main-page/main-page.component';
 import {SharedModule} from "./shared.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {GOODS_DATA, goodsData} from "./fakeData/rest-data";
-import {DOCUMENT} from "@angular/common";
 
 @NgModule({
   declarations: [

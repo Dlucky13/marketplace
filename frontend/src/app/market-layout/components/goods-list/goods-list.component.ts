@@ -1,7 +1,5 @@
-import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {GoodItem, GOODS_DATA} from "../../../fakeData/rest-data";
-import {fromEvent} from "rxjs";
-import {state, style, trigger} from "@angular/animations";
 
 @Component({
   selector: 'mp-goods-list',
