@@ -4,11 +4,12 @@
   "description": "mapketplace app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "serve": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dlucky13/marketplace.git"
+    "url": "git+https://githulsb.com/Dlucky13/marketplace.git"
   },
   "keywords": [
     "Express",
@@ -22,7 +23,10 @@
   },
   "homepage": "https://github.com/Dlucky13/marketplace#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
