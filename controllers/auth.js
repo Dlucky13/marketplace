@@ -2,6 +2,7 @@ const UserModel = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../config/keys');
+const errorHandler = require('../utils/errorHandler');
 
 module.exports.login = async (req, res) => {
   const user = await UserModel.findOne({email: req.body.email});
@@ -59,7 +60,7 @@ module.exports.register = async (req, res) => {
       user
     })
   } catch (e) {
-
+    errorHandler(res, e)
   }
 
 }
