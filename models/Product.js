@@ -20,11 +20,11 @@ const productSchema = new Schema({
   },
   category: {
     ref: 'categories',
-    types: Schema.Types.ObjectId
+    type: Schema.Types.ObjectId
   },
   user: {
     ref: 'users',
-    types: Schema.Types.ObjectId
+    type : Schema.Types.ObjectId
   }
 });
 
