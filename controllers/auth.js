@@ -1,8 +1,10 @@
 const UserModel = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
 const keys = require('../config/keys');
 const errorHandler = require('../utils/errorHandler');
+const upload = require('../middleware/upload');
 
 module.exports.login = async (req, res) => {
   const user = await UserModel.findOne({email: req.body.email});
@@ -50,7 +52,9 @@ module.exports.register = async (req, res) => {
 
   const user = new UserModel({
     email: req.body.email,
-    password: bcrypt.hashSync(password, salt)
+    password: bcrypt.hashSync(password, salt),
+    avatarUrl: req.file ? req.file.path : 'uploads/avatar.png',
+    role: req.body.role ?? 'member'
   })
 
   try {
