@@ -48,8 +48,17 @@ module.exports.remove = async (req, res) => {
 }
 
 module.exports.update = async (req, res) => {
+  const updated = {
+    name: req.body.name
+  };
   try {
+    const category = await CategoryModel.findOneAndUpdate(
+      {_id: req.params.id},
+      {$set: updated},
+      {new: true}
+    )
 
+    res.status(200).json(category);
   } catch (e) {
     errorHandler(res, e)
   }
