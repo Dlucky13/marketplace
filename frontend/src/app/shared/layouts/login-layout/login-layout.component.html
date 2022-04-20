@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="navigation">
+  <button mat-button [routerLink]="'/'">
+    <img class="logo" src="assets/images/logo.png" alt="Main page">
+  </button>
+
+  <span class="spacer"></span>
+
+  <button class="nav-button" mat-button [routerLink]="'login'" routerLinkActive="active">Войти</button>
+  <button class="nav-button" mat-button [routerLink]="'register'" routerLinkActive="active">Зарегестрироваться</button>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+

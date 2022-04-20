@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {GoodItem, GOODS_DATA} from "../../../fakeData/rest-data";
+import {GoodItem, GOODS_DATA} from "../../../../../fakeData/rest-data";
 
 @Component({
   selector: 'mp-goods-list',

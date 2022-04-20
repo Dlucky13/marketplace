@@ -1,0 +1,22 @@
+.navigation {
+  margin-bottom: 80px;
+}
+
+.logo {
+  max-height: 52px;
+  border-radius: 50%;
+}
+
+.active {
+  height: 100%;
+  background: rgb(93 52 166);
+}
+
+.spacer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav-button {
+  height: 100%;
+}
